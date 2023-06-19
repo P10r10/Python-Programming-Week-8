@@ -4,11 +4,9 @@ def get_av(person: dict) -> float:
 
 def smallest_average(person1: dict, person2: dict, person3: dict) -> dict:
     person_with_smallest_av = person1
-    smallest_av = get_av(person1)
-    if get_av(person2) < smallest_av:
+    if get_av(person2) < get_av(person_with_smallest_av):
         person_with_smallest_av = person2
-        smallest_av = get_av(person2)
-    if get_av(person3) < smallest_av:
+    if get_av(person3) < get_av(person_with_smallest_av):
         person_with_smallest_av = person3
     return person_with_smallest_av
 
